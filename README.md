@@ -44,6 +44,8 @@ To check if it was done correctly run <code>ls -l</code> to display information 
 
 ## Add the user to a secondary group
 
+In this task, I must add <code>researcher9</code> to a secondary group (<code>sales_team</code>).<br>
+Researcher9 will also be part of the <code>sales_team</code> group but the primary group is still <code>research_team</code>.
 
 
 ## Delete a user
