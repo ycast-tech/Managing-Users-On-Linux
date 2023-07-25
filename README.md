@@ -45,13 +45,35 @@ To check if it was done correctly run <code>ls -l</code> to display information 
 ## Add the user to a secondary group
 
 In this task, I must add <code>researcher9</code> to a secondary group (<code>sales_team</code>).<br>
-Researcher9 will also be part of the <code>sales_team</code> group but the primary group is still <code>research_team</code>.
+Researcher9 will also be part of the <code>sales_team</code> group but the primary group is still <code>research_team</code>.<br>
+<code>sudo usermod -a -G sales_team researcher9</code>
 
+<img src="images/sales9.png" width=700>
+Note: Options for Linux commands are case-sensitive, so I need to make sure to use a lowercase -a and an uppercase -G.
 
 ## Delete a user
 
+A year later <code>researcher9</code> decides to leave the organization.<br>
+In this task, you must remove them from the system.
 
+To remove a user <cpde>userdel</code> command is used.<br>
+Running <code>sudo userdel researcher9</code> will produce the following output:<br>
+Userdel: Group researcher9 not removed because it is not the primary group of user researcher9. 
+
+When you create a new user in Linux, a group with the same name as the user is automatically created and the user is the only member of that group. After removing users, it is good practice to clean up any empty groups that may remain behind.
+
+The following command will help to delete the researcher9 group that is no longer required: <code>sudo groupdel researcher9</code>
+
+<img src="images/deluser9.png" width=700>
 
 ## Summary
 
-In this project I show my experience managing users on Linux by adding and removing users to to the system and groups.
+In this project I show my practical experience in using basic Linux Bash shell commands to:
+- add a new user,
+- add a user to a group,
+- change user permissions on files, and
+- delete a user.
+
+This is an important milestone on my journey toward managing users in Linux!
+
+##
